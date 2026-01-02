@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 16:16:15 by yosherau          #+#    #+#             */
-/*   Updated: 2025/09/07 13:53:02 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/01/02 20:15:18 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int argc, char *argv[])
 		{
 			cpp_string = argv[index];
 			for (unsigned int i = 0; i < cpp_string.length(); i++)
-				cpp_string[i] = toupper(cpp_string[i]);
+				cpp_string[i] = static_cast<unsigned char>(toupper(cpp_string[i]));
 			std::cout << cpp_string;
 		}
 		std::cout << std::endl;
