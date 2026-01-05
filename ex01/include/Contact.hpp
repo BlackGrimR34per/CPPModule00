@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yosherau <yosherau@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 23:36:51 by yosherau          #+#    #+#             */
-/*   Updated: 2026/01/05 13:50:19 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/01/05 14:00:34 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CONTACT_HPP
 
 # include <string>
+# include <iostream>
 
 class Contact {
 
@@ -28,6 +29,7 @@ class Contact {
 		Contact(const Contact &other);
 		Contact &operator=(const Contact &other);
 		~Contact();
+		std::string get_first_name();
 };
 
 #endif
