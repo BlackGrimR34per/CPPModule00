@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yosherau <yosherau@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/04 23:36:16 by yosherau          #+#    #+#             */
-/*   Updated: 2026/01/05 15:23:33 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/01/06 14:50:40 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@
 # define NUM_CONTACTS 8
 
 class PhoneBook {
-	Contact contacts[NUM_CONTACTS];
-	
+	Contact	contacts[NUM_CONTACTS];
+	bool	isValidInput(std::string input);
+	int		currentIndex = 0;
+
 	public:
 		PhoneBook();
 		void addContact();

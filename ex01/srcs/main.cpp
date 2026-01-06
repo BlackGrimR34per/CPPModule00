@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yosherau <yosherau@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 13:53:13 by yosherau          #+#    #+#             */
-/*   Updated: 2026/01/05 15:22:34 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/01/06 14:29:18 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ int	main()
 {
 	PhoneBook phone;
 	std::string	command;
-	
+
 	std::cout << "--- PhoneBook Text Gui ---" << std::endl;
 	while (true)
 	{
-		std::cout << "Enter command (ADD, SEARCH, EXIT): "; 
-		std::cin >> command;
+		std::cout << "Enter command (ADD, SEARCH, EXIT): ";
+		std::getline(std::cin >> std::ws, command);
 		if (command == "EXIT")
 			break;
 		else if (command == "ADD")
