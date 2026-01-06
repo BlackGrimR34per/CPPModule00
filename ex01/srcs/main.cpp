@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 13:53:13 by yosherau          #+#    #+#             */
-/*   Updated: 2026/01/06 14:29:18 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/01/06 20:09:21 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,22 @@ int	main()
 	while (true)
 	{
 		std::cout << "Enter command (ADD, SEARCH, EXIT): ";
-		std::getline(std::cin >> std::ws, command);
+		if (!std::getline(std::cin >> std::ws, command))
+		{
+			if (std::cin.eof())
+			{
+				std::cin.clear();
+				std::clearerr(stdin);
+				std::cout << std::endl << "Cheeky 🗿" << std::endl;
+				continue;
+			}
+		}
 		if (command == "EXIT")
 			break;
 		else if (command == "ADD")
 			phone.addContact();
 		else if (command == "SEARCH")
-			std::cout << "There" << std::endl;
-		else if (std::cin.eof())
-		{
-			std::cin.clear();
-			std::clearerr(stdin);
-			std::cout << std::endl << "Cheeky 🗿" << std::endl;
-		}
+			phone.searchContact();
 		else
 			std::cout << "Invalid command. Please use 'ADD', 'SEARCH', or 'EXIT'." << std::endl;
 	}
