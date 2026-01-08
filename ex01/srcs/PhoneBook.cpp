@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yosherau <yosherau@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 14:58:03 by yosherau          #+#    #+#             */
-/*   Updated: 2026/01/06 20:35:40 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/01/08 18:12:31 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@
 
 PhoneBook::PhoneBook()
 {
-	std::cout << "PhoneBook's default constructor was called" << std::endl;
+	currentIndex = 0;
+	// std::cout << "PhoneBook's default constructor was called" << std::endl;
+}
+
+PhoneBook::~PhoneBook()
+{
+	// std::cout << "PhoneBook's destructor was called" << std::endl;
 }
 
 void	PhoneBook::print_cell(const std::string &text, int width) const

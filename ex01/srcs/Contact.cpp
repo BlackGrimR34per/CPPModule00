@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yosherau <yosherau@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 13:56:32 by yosherau          #+#    #+#             */
-/*   Updated: 2026/01/06 18:54:39 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/01/08 18:11:08 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 Contact::Contact()
 {
-	std::cout << "Default contact constructor called" << std::endl;
+	// std::cout << "Default contact constructor called" << std::endl;
 }
 
 Contact::Contact(std::string first_name, std::string last_name, std::string nickname, std::string phone_number, std::string darkest_secret):
 	first_name(first_name), last_name(last_name), nickname(nickname), phone_number(phone_number), darkest_secret(darkest_secret)
 {
-	std::cout << "Contact " << first_name << " was created via parameterised constructor" << std::endl;
+	// std::cout << "Contact " << first_name << " was created via parameterised constructor" << std::endl;
 }
 
 bool	Contact::is_empty(void) const
@@ -37,7 +37,7 @@ std::string	Contact::format_string(const std::string &field)
 
 Contact::~Contact()
 {
-	std::cout << "Contact's destructor was called" << std::endl;
+	// std::cout << "Contact's destructor was called" << std::endl;
 }
 
 std::string	Contact::get_first_name(void)
