@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 14:58:03 by yosherau          #+#    #+#             */
-/*   Updated: 2026/01/08 18:12:31 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/01/12 16:22:42 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,11 +146,11 @@ void	PhoneBook::searchContact(void)
 		else
 		{
 			input = input - 1;
-			std::cout << this->contacts[input].get_first_name() << std::endl;
-			std::cout << this->contacts[input].get_last_name() << std::endl;
-			std::cout << this->contacts[input].get_nickname() << std::endl;
-			std::cout << this->contacts[input].get_phone_number() << std::endl;
-			std::cout << this->contacts[input].get_darkest_secret() << std::endl;
+			std::cout << "First name     : " << this->contacts[input].get_first_name() << std::endl;
+			std::cout << "Last name      : " << this->contacts[input].get_last_name() << std::endl;
+			std::cout << "Nickname       : " << this->contacts[input].get_nickname() << std::endl;
+			std::cout << "Phone Number   : " << this->contacts[input].get_phone_number() << std::endl;
+			std::cout << "Darkest secret : " << this->contacts[input].get_darkest_secret() << std::endl;
 			break;
 		}
 	}
