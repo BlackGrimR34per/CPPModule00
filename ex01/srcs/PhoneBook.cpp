@@ -6,7 +6,7 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 14:58:03 by yosherau          #+#    #+#             */
-/*   Updated: 2026/01/12 16:22:42 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/11/20 18:41:51 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 #include <iomanip>
 #include <limits>
 
-PhoneBook::PhoneBook()
+PhoneBook::PhoneBook():
+	currentIndex(0)
 {
-	currentIndex = 0;
+
 	// std::cout << "PhoneBook's default constructor was called" << std::endl;
 }
 
@@ -97,10 +98,10 @@ void	PhoneBook::searchContact(void)
 	int			input;
 	int			column_width = 10;
 	std::string	header_separator = "+----------+----------+----------+----------+\n";
-	std::string	h1 = "index", h2 = "first name", h3 = "lastname", h4 = "nickname";
+	std::string	h1 = "index", h2 = "firstname", h3 = "lastname", h4 = "nickname";
 	std::string	seperator = "|";
 
-	if (this->contacts[0].is_empty() == true)
+	if (this->contacts[0].is_empty())
 	{
 		std::cout << "--- PhoneBook Is Empty ---" << std::endl;
 		return;
@@ -112,7 +113,7 @@ void	PhoneBook::searchContact(void)
 	print_cell(h4, column_width);
 	std::cout << "|" << std::endl;
 	std::cout << header_separator;
-	for (int index = 0; index < 8; index++)
+	for (int index = 0; index < NUM_CONTACTS; index++)
 	{
 		if (this->contacts[index].is_empty() == true)
 			continue;
