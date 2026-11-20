@@ -6,12 +6,11 @@
 /*   By: yosherau <yosherau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 16:16:15 by yosherau          #+#    #+#             */
-/*   Updated: 2026/01/08 19:47:11 by yosherau         ###   ########.fr       */
+/*   Updated: 2026/11/20 17:58:01 by yosherau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <stdio.h>
 #include <stdlib.h>
 
 # define DEFAULT_MESSAGE "* LOUD AND UNBEARABLE FEEDBACK NOISE *"
